@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   user-select: none;
+   font-synthesis: none;
+   scroll-behavior: smooth;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+
+   --black-col: hsl(0, 0%, 15%);
+   --grey-col: hsl(0, 0%, 82%);
+   --blue-col: hsl(240, 100%, 75%);
+   --skyblue-col: hsl(240, 100%, 70%, 0.4);
+
+   --outer-border-radius: 7px;
+   --inner-border-radius: 4px;
+   --scrollbar-px: 8px;
+   --distance-inner: 12px;
+}
+
+::-webkit-scrollbar, ::-webkit-scrollbar-thumb {
+   border-radius: var(--inner-border-radius);
+}
+
+::-webkit-scrollbar {
+   width: 8px;
+   background-color: var(--grey-col);
+}
+
+::-webkit-scrollbar-thumb {
+   min-height: 45px;
+   background-color: var(--blue-col);
+}
+
+h1, h2, h3, h4, h5, h6, p,
+span, div, i, a {
+   color: var(--black-col);
+   font-family: "Inter";
+}
+
+ol, ul, li, i, a {
+   text-decoration: none;
+   list-style: none;
+}
+
+input, button {
+   outline: none;
+   border: none;
+   background: none;
+}
+
+button {   
+   transition: transform 90ms ease;
+   cursor: pointer;
+}
+
+button:active {
+   transform-origin: center;
+   transform: scale(0.9);
+}
+
+#root {
+   background-color: var(--blue-col);
+
+   height: 100dvh;
+   width: 100%;
+   display: grid;
+   place-content: center;
+}
