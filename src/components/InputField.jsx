@@ -9,10 +9,10 @@ export default function InputField(props) {
                type="text"
                placeholder="Enter todo here..."
                value={itemValue}
-               onChange={(e) => setItemValue(e.target.value.trim())}
+               onChange={(e) => setItemValue(e.target.value)}
                onKeyDown={(e) => {
                   if (e.key === "Enter") {
-                     addEventListener(itemValue);
+                     addEventListener(itemValue.trim());
                      setItemValue("");
                   }
                }}
@@ -20,7 +20,7 @@ export default function InputField(props) {
          <button
                type="button"
                onClick={(e) => {
-                  addEventListener(itemValue);
+                  addEventListener(itemValue.trim());
                   setItemValue("");
                }}
          >ADD</button>
